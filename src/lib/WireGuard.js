@@ -236,7 +236,8 @@ Endpoint = ${WG_HOST}:${WG_CONFIG_PORT}`;
     const publicKey = await Util.exec(`echo ${privateKey} | wg pubkey`, {
       log: 'echo ***hidden*** | wg pubkey',
     });
-    const preSharedKey = await Util.exec('wg genpsk');
+    //const preSharedKey = await Util.exec('wg genpsk');
+    const preSharedKey = '';
 
     // Calculate next IP
     let address;
